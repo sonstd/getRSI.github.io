@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Check RSI</title>
+<title>Input and Output Box</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -22,18 +22,20 @@
     .input-row {
         display: flex;
         align-items: center;
-        margin-bottom: 20px; 
+        margin-bottom: 10px; 
     }
     
     .input-description {
         margin-right: 10px;
     }
     
-    select {
+    .input-box {
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        margin-right: 10px; 
+        margin-right: 10px;
+        text-align: center;
+        width: 80px
     }
     
     #submit-btn {
@@ -93,28 +95,101 @@
         width: 33.3%;
         height: 100%;
     }
+
+    #popup {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #popup_now_info_space {
+        width: 80%;
+        height: 14%;
+        margin: 2%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup_now_info {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #popup_price {
+        width: 80%;
+        height: 14%;
+        margin: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+        border: solid black;
+    }
+    #popup_bt_space {
+        width: 80%;
+        height: 14%;
+        margin: 2%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup_bt {
+        width: 30%;
+        height: 80%;
+        margin: 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: solid black;
+        border-radius: 3px;
+    }
+    #popup_result {
+        width: 80%;
+        height: 14%;
+        margin: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        border: solid black;
+    }
+
 </style>
 </head>
 <body>
 <div class="container">
     <div class="input-row">
         <div class="input-description">
-            <h3>rsi period 설정</h3>
+            <h4>rsi period: </h4>
         </div>
-        <select id="input-box1">
-            <option value="7">7</option>
-            <option value="14">14</option>
-        </select>
+        <input class="input-box"></input>
     </div>
     <div class="input-row">
         <div class="input-description">
-            <h3>candle 설정</h3>
+            <h4>candle: </h4>
         </div>
-        <select id="input-box2">
+        <select class="input-box">
             <option value="주">주</option>
             <option value="일">일</option>
             <option value="240분">240분</option>
             <option value="60분">60분</option>
+            <option value="60분">30분</option>
+            <option value="60분">15분</option>
+            <option value="60분">10분</option>
+            <option value="60분">5분</option>
+            <option value="60분">3분</option>
+            <option value="60분">1분</option>
         </select>
     </div>
     <div class="input-row">
